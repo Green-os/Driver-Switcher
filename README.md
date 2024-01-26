@@ -11,7 +11,7 @@ Bu, laptoplarda Optimus veya benzeri grafik geçiş teknolojileri bulunan kullan
 
 ### 2. Kodu İndirme
 ```bash
-git clone 
+git clone https://github.com/Green-os/Driver-Switcher.git
 cd Driver-Switcher/
 ```
 ### 3. Kodu çalıştırma
@@ -62,7 +62,7 @@ This simple Python script utilizes the DRI_PRIME environmental variable to run a
 
 ### 2. Download the Code
 ```bash
-git clone 
+git clone https://github.com/Green-os/Driver-Switcher.git
 cd Driver-Switcher/
 ```
 
