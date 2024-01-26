@@ -4,7 +4,8 @@ def run_command_with_dri_prime(driver_index, command):
     try:
         # Sürücü numarası doğrulama
         if driver_index not in [0, 1]:
-            raise ValueError("Bilinmeyen sürücü numarası.0 numara Intel HD Graphics 520 veya 1 numara AMD Radeon R5 M330.")
+            raise ValueError("Bilinmeyen sürücü numarası. <Kendi sürücünüzün adları ve numaraları.>")
+            # Örnek -> "0 numara Intel HD Graphics 520 veya 1 numara AMD Radeon R5 M330."
 
         # Girilen komutları "DRI_PRIME" sürücü numarası ile çalıştırılıyor
         subprocess.run(f'DRI_PRIME={driver_index} {command}', shell=True, check=True)
@@ -19,7 +20,8 @@ def run_command_with_dri_prime(driver_index, command):
 if __name__ == "__main__":
     try:
         # Kullanıcıdan kullanılmak istenen sürücü numarası alımı
-        DRI = int(input("Sürücüleri seçin (0 = Intel HD Graphics 520, 1 = AMD Radeon R5 M330): "))
+        DRI = int(input("Sürücüleri seçin <Kendi sürücünüzün adları ve numaraları.>: "))
+        # Örnek -> "0 numara Intel HD Graphics 520 veya 1 numara AMD Radeon R5 M330."
         
         # Yanlış giriş
         if DRI not in [0, 1]:
